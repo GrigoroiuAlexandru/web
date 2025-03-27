@@ -1,4 +1,4 @@
-/* Resetare stiluri implicite */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,6 @@
     font-family: Arial, sans-serif;
 }
 
-/* ----- HEADER ----- */
 .header {
     display: flex;
     justify-content: space-between;
@@ -37,7 +36,6 @@
     text-decoration: underline;
 }
 
-/* ----- HERO SECTION ----- */
 .hero {
     position: relative;
     background: url('http://via.placeholder.com/1600x500') center/cover no-repeat;
@@ -64,7 +62,7 @@
     font-size: 14px;
 }
 
-/* ----- MAIN CONTENT ----- */
+
 .content {
     width: 60%;
     margin: 50px auto;
@@ -102,7 +100,7 @@
     border-radius: 5px;
 }
 
-/* ----- RELATED ARTICLES ----- */
+
 .related {
     background: black;
     color: white;
@@ -150,7 +148,7 @@
     border-radius: 5px;
 }
 
-/* ----- SOCIAL LINKS ----- */
+
 .social {
     text-align: center;
     margin: 20px 0;
@@ -170,7 +168,6 @@
     font-size: 16px;
 }
 
-/* ----- FOOTER ----- */
 .footer {
     background: black;
     color: white;
