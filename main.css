@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
+    background-color: rgb(235, 224, 20);
     padding: 15px 50px;
 }
 
@@ -129,7 +129,7 @@
 
 .item a {
     text-decoration: none;
-    color: white;
+    color: rgb(233, 193, 193);
 }
 
 .item__title {
@@ -141,7 +141,7 @@
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background: white;
+    background: rgb(120, 225, 213);
     color: black;
     text-decoration: none;
     font-weight: bold;
@@ -170,7 +170,7 @@
 
 .footer {
     background: black;
-    color: white;
+    color: rgb(216, 14, 14);
     text-align: center;
     padding: 20px;
 }
@@ -184,7 +184,7 @@
 
 .menu__link {
     text-decoration: none;
-    color: white;
+    color: rgb(113, 48, 182);
     font-weight: bold;
 }
 
