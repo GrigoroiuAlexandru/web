@@ -107,50 +107,62 @@
 }
 
 
-/* ----- RELATED ARTICLES ----- */
 .related {
   background: black;
   color: white;
   padding: 30px;
   text-align: center;
+  position: relative;
 }
 .related__title {
   font-size: 18px;
   margin-bottom: 20px;
-  position: relative;
 }
 .content__image2{
   width: 320px;
   height: 320px;
+}
+.special{
+  border: 3px solid #0089de;
 }
 .related__wrapper {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
-
-.item {
-  
-}
 .item__title {
   position: absolute;
-  top: 40%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: #ffffff;
+  margin: -50px 0 0 -340px;
+  padding: 0 0 -50px 0;
 }
-
+.item__title2 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  margin: 0 0 0 0;
+}
+.item__title3 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  margin: 0 0 0 340px;
+}
 .related__action {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
-  background: white;
-  color: black;
+  background: rgb(1, 1, 51);
+  color: rgb(255, 255, 255);
   text-decoration: none;
-  font-weight: bold;
 }
-
-
-
 /* ----- SOCIAL LINKS ----- */
 .social {
   text-align: center;
@@ -159,32 +171,45 @@
 
 .social__wrapper {
   list-style: none;
-  display: flex;
   justify-content: center;
   gap: 20px;
 }
-
+.content__image3{
+  width: 500px;
+  height: 60px;
+  margin: 10px 0 0 650px;
+  position: absolute;
+}
 .social__link {
   text-decoration: none;
   color: black;
   font-weight: bold;
   font-size: 16px;
+  margin: 0 400px 0 0;
 }
 /* ----- FOOTER ----- */
 .footer {
   background: black;
   color: white;
   text-align: center;
-  padding: 20px;
 }
 
 .menu__wrapper {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
 }
-
+.menu__item{
+  margin: 20px 0 0 0;
+  padding: -20px 0 0 0;
+  margin-bottom: -20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #9d9898;
+}
+#culoare{
+  color: #0070e0;
+}
 .menu__link {
   text-decoration: none;
   color: white;
@@ -193,7 +218,7 @@
 
 .footer__logo img {
   width: 200px;
-  height: auto;
+  height: 100px;
   margin-top: 10px;
 }
 
