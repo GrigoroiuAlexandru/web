@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creare Cont</title>
+    <link rel="stylesheet" href="styles2.css" />
+  </head>
+  <body class="body">
+    <header class="header">
+      <h1>Creare cont</h1>
+      <nav class="nav">
+        <ul>
+          <li>
+            <a href="Aplicatie_home-made.html"><strong>Acasa</strong></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <form id="register-form" action="crearecont.php" method="POST">
+        <label for="name">Nume:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="parola">Parola:</label>
+        <input type="password" id="parola" name="parola" required />
+
+        <button type="submit">Creare cont</button>
+      </form>
+    </main>
+  </body>
+</html>

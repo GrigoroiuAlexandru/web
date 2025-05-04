@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parfumuri de încercat</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Parfumuri de încercat</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Acasă</a></li>
+          <li>
+            <a href="parfumuri_de_incercat.html">Parfumuri de încercat</a>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="parfumuri">
+        <h2>Lista parfumurilor</h2>
+        <ul id="lista-parfumuri">
+          <!-- Lista parfumurilor va fi generată dinamic aici -->
+        </ul>
+      </section>
+
+      <section id="detalii-parfum">
+        <h2>Detalii parfum</h2>
+        <div id="detalii"></div>
+        <button id="back-button">Înapoi</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Parfumuri Inc. Toate drepturile rezervate.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Funcție pentru a încărca lista parfumurilor
+        function loadParfumuri() {
+          $.ajax({
+            url: "parfumuri.json",
+            dataType: "json",
+            success: function (data) {
+              var lista = $("#lista-parfumuri");
+              lista.empty();
+              $.each(data, function (index, parfum) {
+                lista.append(
+                  '<li data-id="' + parfum.id + '">' + parfum.nume + "</li>"
+                );
+              });
+            },
+          });
+        }
+
+        // Funcție pentru a încărca detaliile parfumului selectat
+        function loadDetaliiParfum(id) {
+          $.ajax({
+            url: "parfumuri.json",
+            dataType: "json",
+            success: function (data) {
+              var parfum = data.find((p) => p.id == id);
+              if (parfum) {
+                $("#detalii").html(
+                  "<h3>" + parfum.nume + "</h3><p>" + parfum.descriere + "</p>"
+                );
+                $("#detalii-parfum").show();
+                $("#parfumuri").hide();
+              }
+            },
+          });
+        }
+
+        // Eveniment click pe un parfum din listă
+        $("#lista-parfumuri").on("click", "li", function () {
+          var id = $(this).data("id");
+          loadDetaliiParfum(id);
+        });
+
+        // Eveniment click pe butonul Înapoi
+        $("#back-button").click(function () {
+          $("#detalii-parfum").hide();
+          $("#parfumuri").show();
+        });
+
+        // Încărcarea inițială a parfumurilor
+        loadParfumuri();
+      });
+    </script>
+  </body>
+</html>
