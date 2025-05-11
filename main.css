@@ -28,9 +28,12 @@
   margin-left: -30px; 
   margin: 0 40px 0 0;
 }
-.nav__link{
-  text-decoration: none;
-  color: #ffffff;
+
+.nav__link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
 }
 .pt_buton{
   text-decoration: none;
@@ -42,60 +45,53 @@
 
 
 .hero {
-  color: rgb(244, 244, 247);
-  text-align: center;
-  display: flex;
+    position: relative;
+    background: url('http://via.placeholder.com/1600x500') center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
 }
 .hero__wrapper {
-  position: relative;
-  display: inline;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+    border-radius: 5px;
 }
-.hero__title{
-  font-size: 32px;
-  font-weight: bold;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-bottom:2px solid  #ffffff ;
- /*nu stiu cum sa fac sa fie linia mai mica de la border-bottom*/
-  padding: 0 0  20px 0;
-  margin: 0 0 -20px 0;
+
+.hero__title {
+    font-size: 32px;
+    font-weight: bold;
 }
-.hero__subtitle{
-  font-size: 20px;
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+.hero__subtitle {
+    font-size: 14px;
 }
-.content__image{
-  width: 1510px;
-  height: 500px;
+
+
+.content {
+    width: 60%;
+    margin: 50px auto;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
 }
-.article__wrapper{
-  align-items: center;
-  margin: 0 350px 0 350px;
-  padding: 0 0 50px 0;
-}
-.content__title{
-  margin: 80px 0 50px 350px;
-  font-size: 25px;
+
+.content__title {
+    font-size: 24px;
+    margin-bottom: 15px;
 }
 .content__text{
   margin: 0 0 50px 0;
   color: #9d9898;
 }
-.content__quote::before{
-  content:'“';
- display: flex;
- font-size: 100px;
- margin: -65px 0 -60px -35px;
-  color: #000000;
-}
-.quote{
-  margin:0 0 40px -8px;
-  color: #000000;
+
+.quote {
+    font-style: italic;
+    border-left: 5px solid black;
+    padding-left: 15px;
+    margin: 20px 0;
 }
 .quote__author{
   margin:0 0 0 -580px;
@@ -108,11 +104,10 @@
 
 
 .related {
-  background: black;
-  color: white;
-  padding: 30px;
-  text-align: center;
-  position: relative;
+    background: black;
+    color: white;
+    padding: 50px;
+    text-align: center;
 }
 .related__title {
   font-size: 18px;
@@ -130,6 +125,20 @@
   justify-content: center;
   gap: 20px;
 }
+
+.item {
+    background: #222;
+    padding: 20px;
+    width: 30%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.item a {
+    text-decoration: none;
+    color: rgb(233, 193, 193);
+}
+
 .item__title {
   position: absolute;
   top: 60%;
@@ -156,12 +165,14 @@
   margin: 0 0 0 340px;
 }
 .related__action {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: rgb(1, 1, 51);
-  color: rgb(255, 255, 255);
-  text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: rgb(120, 225, 213);
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
 }
 
 .social {
@@ -181,17 +192,17 @@
   position: absolute;
 }
 .social__link {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  font-size: 16px;
-  margin: 0 400px 0 0;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .footer {
-  background: black;
-  color: white;
-  text-align: center;
+    background: black;
+    color: rgb(216, 14, 14);
+    text-align: center;
+    padding: 20px;
 }
 
 .menu__wrapper {
