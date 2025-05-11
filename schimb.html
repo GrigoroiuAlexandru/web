@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schimb</title>
+    <link rel="stylesheet" href="styles4.css" />
+  </head>
+  <body class="body">
+    <header class="header">
+      <h1>Propune un Schimb</h1>
+      <nav class="nav">
+        <ul>
+          <li><a href="Aplicatie_home-made.html">Acasa</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <form id="schimb-form" action="schimb-handler.php" method="POST">
+        <label for="bun">Numele Bunului:</label>
+        <input type="text" id="bun" name="bun" required />
+
+        <label for="detalii">Categoria de Preț:</label>
+        <select id="detalii" name="detalii" required>
+          <option value="pret-mic">Ieftin</option>
+          <option value="pret-mediu">Mediu</option>
+          <option value="pret-mare">Scump</option>
+        </select>
+
+        <button type="submit">Propune Schimb</button>
+      </form>
+
+      <h2 class="h2">Bunuri disponibile pentru schimb</h2>
+      <form id="select-schimb" action="schimb-select.php" method="POST">
+        <label for="categorie">Alege categoria:</label>
+        <select id="categorie" name="categorie" required>
+          <option value="pret-mic">Ieftin</option>
+          <option value="pret-mediu">Mediu</option>
+          <option value="pret-mare">Scump</option>
+        </select>
+
+        <button type="submit">Vezi produse</button>
+      </form>
+    </main>
+  </body>
+</html>
